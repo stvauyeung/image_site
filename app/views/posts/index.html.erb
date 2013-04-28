@@ -1,0 +1,12 @@
+<h1>All posts</h1> 
+  <div>
+	<ul>
+      <div>
+    	<% @posts.reverse_each do |post| %>
+    	<li>
+	  	  <h3><%= link_to post.title, post_path(post) %></h3>
+    	</li>
+    	<% end %>
+      </div>
+    </ul>
+  </div>
