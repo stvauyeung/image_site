@@ -1,5 +1,5 @@
 ImageSite::Application.routes.draw do
-  match '/artists' => 'artists#index'
+  match '/posts' => 'posts#index'
   match "posts/show/:id" => 'posts#show'
 
   # The priority is based upon order of creation:
