@@ -1,3 +1,3 @@
 <h1><%= @post.title %></h1>
-<p><%= image_tag(@post.image_url) %></p>
+<p><%= image_tag @post.picture.url %></p>
 <p><%= link_to "See Another >>", :controller => "posts", :action => "show", :id => Post.first(:order => "RANDOM()") %></p>
