@@ -5,7 +5,7 @@ class PostsController < ApplicationController
 
 	def show
 		@post = Post.find(params[:id])
-		@post.picture_url(@post.image_url)
+		@picture = Post.find(params[:id]).image_url
 		# @comment = Comment.new
 		# @comment.post_id = @post.id
 	end
