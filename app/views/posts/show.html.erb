@@ -1,5 +1,26 @@
-<h1><%= @post.title %></h1>
-<div style="width:600px;">
-  <p><%= image_tag @picture %></p>
-  <p><%= link_to "See Another >>", :controller => "posts", :action => "show", :id => Post.first(:order => "RANDOM()") %></p>
+<div class="container-fluid">
+  <div class="row-fluid">
+	<div class="span8">
+      <h1><%= @post.title %></h1>
+  	  <p class="pagination-centered">
+  	  	<%= image_tag @picture %>
+  	  </p>
+  	  <p>
+  	  	<%= link_to "See Another >>", :controller => "posts", :action => "show", :id => Post.first(:order => "RANDOM()") %>
+  	  </p>
+	</div>
+	<div class="span4">
+      <p>
+      <%= image_tag 'http://upload.wikimedia.org/wikipedia/en/f/f3/True_dating_service_ad.jpg' %>
+  	  </p>
+      <p>More funnies:</p>
+      <ul>
+    	<% @sidebar_posts.each do |post| %>
+	      <li>
+		  	 <p><%= link_to post.title, :controller => "posts", :action => "show", :id => post.id %></p>
+	      </li>
+    	<% end %>
+  	  </ul>
+    </div>
+  </div>
 </div>

@@ -4,6 +4,7 @@ class PostsController < ApplicationController
 	end
 
 	def show
+		@sidebar_posts = Post.find(:all, :order => "RANDOM()", :limit => 12)
 		@post = Post.find(params[:id])
 		@picture = Post.find(params[:id]).image_url
 		# @comment = Comment.new
