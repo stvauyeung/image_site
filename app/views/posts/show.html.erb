@@ -17,8 +17,8 @@
       <ul>
     	<% @sidebar_posts.each do |post| %>
 	      <li>
-		  	 <p><%= link_to post.title, :controller => "posts", :action => "show", :id => post.id %></p>
-	      </li>
+         <%= image_tag post.picture_from_url(post.image_url), :size => '100x100' %>
+		  	 <%= link_to post.title, :controller => "posts", :action => "show", :id => post.id %>
     	<% end %>
   	  </ul>
     </div>

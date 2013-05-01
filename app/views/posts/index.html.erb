@@ -1,12 +1,12 @@
 <h1>All posts</h1> 
   <div>
 	<ul>
-      <div>
+    <div>
     	<% @posts.reverse_each do |post| %>
     	<li>
 	  	  <h3><%= link_to post.title, :controller => "posts", :action => "show", :id => post.id %></h3>
     	</li>
     	<% end %>
-      </div>
-    </ul>
+    </div>
+  </ul>
   </div>
